@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="head">
+    <h1>Lab Registration Form</h1>
+  </div>
+
+  <div class="container">
+    <form id="registrationForm" action="/register" method="POST">
+      <div class="field">
+        <label for="name">Student Name</label>
+        <input type="text" id="name" placeholder="Enter the Name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="regno">Register Number</label>
+        <input type="number" id="regno" placeholder="Enter the Register Number" name="registerNumber" required>
+      </div>
+      <div class="field">
+        <label for="dept">Department</label>
+        <input type="text" id="dept" placeholder="Enter the Department" name="department" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="Enter the Email" 
+          name="email" 
+          required
+          oninput="validateEmail()" 
+        >
+        <small id="emailError" style="color: red; display: none;">Only college emails ending with @francisxavier.ac.in are allowed.</small>
+      </div>
+
+      <div class="field">
+        <label for="mobno">Mobile Number</label>
+        <input type="tel" id="mobno" placeholder="Enter the Mobile Number" pattern="[0-9]{10}" name="mobileNumber" required>
+      </div>
+      <button type="submit">Next</button>
+    </form>
+  </div>
+
+
+
+  <script>
+    function validateEmail() {
+      const emailInput = document.getElementById('email');
+      const emailError = document.getElementById('emailError');
+      const collegeEmailPattern = /^[a-zA-Z0-9._%+-]+@francisxavier\.ac\.in$/;
+  
+      if (!collegeEmailPattern.test(emailInput.value)) {
+        emailError.style.display = 'block';
+      } else {
+        emailError.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
+

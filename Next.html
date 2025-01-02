@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <Style>
+        form{
+
+            background-color: blueviolet;
+            color: white;
+            height: 450px;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 500px;
+            margin-top: 90px;
+            padding: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        select{
+            border-radius: 5px;
+            gap: 50px;
+            width: 90%;
+            height: 25px;
+            border: none;
+            padding: 5px;
+        }
+        label{
+            gap: 10px;
+           
+        }
+    
+        input ,select{
+            margin-top: 10px;
+        }
+        .field{
+            margin-top: 20px;
+        }
+        .nextform{
+            margin-top: 10px;
+        }
+        #other{
+            width: 90%;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .field{
+            display: block;
+        }
+        #resume{
+            width: 90%;
+        }
+        button{
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 30px;
+            width: 90%;
+            font-weight: bold;
+            background-color: blue;
+            font-size: 18px;
+            border: none;
+            color: white;
+        }
+    </Style>
+</head>
+<body>
+    <div class="container">
+      <div class="nextform">
+        <form id="labSelectionForm" action="/submit" method="POST">
+          <div class="field">
+            <label for="lab">Choose a Lab</label>
+            <select id="lab" name="lab" required>
+              <option value="">Select a Lab</option>
+              <option value="ideationlab">Ideation Lab</option>
+              <option value="iot">IOT</option>
+              <option value="webdevelopment">Web Development</option>
+              <option value="mobileappdevelopment">Mobile App Development</option>
+              <option value="cloudcomputing">Cloud Computing</option>
+              <option value="datascience">Data Science</option>
+            </select>
+          </div>
+  
+          <div class="field">
+            <label for="skills">Skills</label>
+            <div class="checkbox">
+              <input type="checkbox" name="skills" value="Html & CSS">
+              <label>Html & CSS</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="skills" value="JavaScript">
+              <label>JavaScript</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="skills" value="Python">
+              <label>Python</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="skills" value="Flutter">
+              <label>Flutter</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="skills" value="Android Studio">
+              <label>Android Studio</label>
+            </div>
+            <div class="checkbox">
+              <input type="text" id="otherSkill" placeholder="Other...">
+            </div>
+          </div>
+  
+          <div class="field">
+            <label for="resume">Resume</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+          </div>
+  
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+</body>
+    
