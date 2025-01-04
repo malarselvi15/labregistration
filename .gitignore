@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+logs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Render or deployment-related temporary files
+.cache/
+tmp/
+
+# Package lock file (optional, if you don't want to track it)
+package-lock.json
+
+# Uploads or dynamically created files
+uploads/
+
+# Editor settings
+.vscode/
+.idea/
